@@ -2,7 +2,7 @@
 
 Back-end service for managing partner-based financial transactions with audit logging. Built using **Node.js**, **Express**, and **MongoDB**.
 
-## 📦 Features
+##  Features
 
 - Partner-to-partner transaction creation
 - Role-based access control (RBAC)
@@ -13,7 +13,7 @@ Back-end service for managing partner-based financial transactions with audit lo
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - Node.js + Express.js
 - MongoDB + Mongoose
@@ -24,9 +24,9 @@ Back-end service for managing partner-based financial transactions with audit lo
 
 ---
 
-## 🧩 API Endpoints
+## API Endpoints
 
-### 🔐 Authentication Middleware Required
+###  Authentication Middleware Required
 
 | Method | Endpoint                    | Roles Allowed                          | Description                                  |
 |--------|-----------------------------|----------------------------------------|----------------------------------------------|
@@ -37,7 +37,7 @@ Back-end service for managing partner-based financial transactions with audit lo
 
 ---
 
-## 📒 Audit Logging
+## Audit Logging
 
 Every action is tracked in the `AuditLog` model:
 
@@ -52,7 +52,7 @@ Every action is tracked in the `AuditLog` model:
 
 ---
 
-## 🧪 Testing via Postman
+##  Testing via Postman
 
 1. **Create Transaction**  
    - `POST /api/transactions`  
@@ -74,7 +74,7 @@ Every action is tracked in the `AuditLog` model:
 
 ---
 
-## 📂 Folder Structure
+##  Folder Structure
 
 jaudi-fintech-server/
 │
@@ -100,13 +100,9 @@ jaudi-fintech-server/
 ├── server.js
 └── app.js
 
-yaml
-Copy
-Edit
-
 ---
 
-## 🚀 Next Steps
+##  Next Steps
 
 - Add routes & views for Audit Logs (admin only)
 - Connect frontend for partner interaction and admin control panel
@@ -114,7 +110,7 @@ Edit
 
 ---
 
-## 🧑‍💻 Author
+##  Author
 
 **Youssef Ali**  
 Full-Stack Web Developer
