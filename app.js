@@ -7,9 +7,10 @@ app.use(express.json());
 
 
 // here's the place for routes
-app.use("/auth", require("./routes/auth.routes.js"))
-app.use('/transactions', require('./routes/transactions.routes'));
-app.use('/audit-logs', require("./routes/audit.routes.js"))
+app.use("/api/auth", require("./routes/auth.routes.js"))
+app.use('/api/transactions', require('./routes/transactions.routes'));
+app.use('/api/audit-logs', require("./routes/audit.routes.js"))
+app.use("/api", require("./routes/rates.route.js"))
 
 
 
