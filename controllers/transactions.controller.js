@@ -1,5 +1,6 @@
-const Transactions = require("./../models/Transaction.js");
+const Transaction = require("./../models/Transaction.js");
 const User = require("./../models/User.js");
+const logAudit = require("./../utils/loguAudit.js")
 
 
 const createTransaction = async (req,res) => {

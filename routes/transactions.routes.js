@@ -10,12 +10,12 @@ const {
 const authMiddleware = require("./../middleware/auth.middleware.js");
 const roleMiddleware = require("./../middleware/rbac.middleware.js");
 
-router.post('/', authMiddleware, roleMiddleware(['partner-sender']), createTransaction);
+router.post('/', authMiddleware, roleMiddleware('partner-sender'), createTransaction);
 
-router.get('/mine', authMiddleware, roleMiddleware(['partner-sender', 'partner-receiver']), getMyTransaction);
+router.get('/mine', authMiddleware, roleMiddleware('partner-sender', 'partner-receiver'), getMyTransaction);
 
-router.get('/', authMiddleware, roleMiddleware(['global-admin', 'regional-admin']), getAllTransactions);
+router.get('/', authMiddleware, roleMiddleware('global-admin', 'regional-admin'), getAllTransactions);
 
-router.patch('/:id/status', authMiddleware, roleMiddleware(['global-admin', 'regional-admin']), updateTransactionStatus);
+router.patch('/:id/status', authMiddleware, roleMiddleware('global-admin', 'regional-admin'), updateTransactionStatus);
 
 module.exports = router;
