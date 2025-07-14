@@ -35,6 +35,8 @@ Back-end service for managing partner-based financial transactions with audit lo
 | GET    | `/api/transactions/`        | `regional-admin`, `global-admin`       | View all transactions (filtered by region)   |
 | PATCH  | `/api/transactions/:id/status` | `regional-admin`, `global-admin`     | Approve/Reject a transaction                 |
 
+and `http://localhost:5000/api/rates?from=USD&to=USDC` for rates caching
+
 ---
 
 ## Audit Logging
@@ -71,34 +73,6 @@ Every action is tracked in the `AuditLog` model:
    - `PATCH /api/transactions/:id/status`  
    - Body: `{ "status": "approved" | "rejected" }`  
    - Header: `Authorization: Bearer <token>`
-
----
-
-##  Folder Structure
-
-jaudi-fintech-server/
-│
-├── controllers/
-│ └── transactions.controller.js
-│
-├── middleware/
-│ ├── auth.middleware.js
-│ └── rbac.middleware.js
-│
-├── models/
-│ ├── Transaction.js
-│ ├── User.js
-│ └── AuditLog.js
-│
-├── routes/
-│ └── transactions.routes.js
-│
-├── utils/
-│ └── logAudit.js
-│
-├── .env
-├── server.js
-└── app.js
 
 ---
 
